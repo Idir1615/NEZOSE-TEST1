@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nozease offers natural nasal sticks to improve breathing, enhance sleep, and boost performance. Shop now for a better you!">
+  <meta name="keywords" content="Nozease, nasal stick, breathing solutions, sleep improvement, wellness products, health">
+  <meta name="author" content="Nozease">
+  <title>Nozease - Transformez Votre Respiration, Transformez Votre Vie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://nozease.com/cdn/shop/files/Nozease_Logo.png?v=1750697988&width=32">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #f7fafc;
+      color: #1a202c;
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: #1a202c;
+      color: #e2e8f0;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+
+    body.dark-mode header {
+      background: #2d3748;
+    }
+
+    .logo img {
+      height: 48px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2d3748;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.2s;
+    }
+
+    body.dark-mode nav a {
+      color: #e2e8f0;
+    }
+
+    nav a:hover {
+      color: #3182ce;
+    }
+
+    .theme-toggle {
+      cursor: pointer;
+      background: none;
+      border: 2px solid #3182ce;
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-size: 14px;
+      color: #3182ce;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: #3182ce;
+      color: #fff;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #2d3748;
+    }
+
+    body.dark-mode .hamburger {
+      color: #e2e8f0;
+    }
+
+    .cart-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #3182ce;
+      color: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .cart-icon:hover {
+      transform: scale(1.1);
+    }
+
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, #bee3f8, #e6fffa);
+      text-align: center;
+      padding: 140px 0;
+      overflow: hidden;
+    }
+
+    body.dark-mode .hero {
+      background: linear-gradient(135deg, #2d3748, #4a5568);
+    }
+
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      font-weight: 800;
+      margin-bottom: 24px;
+      color: #1a365d;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark-mode .hero h1 {
+      color: #e2e8f0;
+    }
+
+    .hero p {
+      font-size: 24px;
+      margin-bottom: 32px;
+      color: #4a5568;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    body.dark-mode .hero p {
+      color: #cbd5e0;
+    }
+
+    .cta-btn {
+      padding: 16px 40px;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      background: #3182ce;
+      color: #fff;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-btn:hover {
+      background: #2b6cb0;
+      transform: translateY(-2px);
+    }
+
+    .cta-btn:focus {
+      outline: 2px solid #3182ce;
+      outline-offset: 4px;
+    }
+
+    .section {
+      padding: 120px 0;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 40px;
+      font-weight: 800;
+      margin-bottom: 48px;
+      color: #1a365d;
+    }
+
+    body.dark-mode .section h2 {
+      color: #e2e8f0;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 48px;
+    }
+
+    .product {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+
+    body.dark-mode .product {
+      background: #2d3748;
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+    }
+
+    .product:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    .product a {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      overflow: hidden;
+    }
+
+    .product img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      loading: lazy;
+    }
+
+    .product a:hover img {
+      transform: scale(1.05);
+    }
+
+    .product .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(49, 130, 206, 0.3);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+
+    .product a:hover .overlay {
+      opacity: 1;
+    }
+
+    .product h3 {
+      font-size: 24px;
+      margin: 16px 16px 8px;
+      color: #1a202c;
+    }
+
+    body.dark-mode .product h3 {
+      color: #e2e8f0;
+    }
+
+    .product p {
+      font-size: 16px;
+      padding: 0 16px 16px;
+      color: #4a5568;
+    }
+
+    body.dark-mode .product p {
+      color: #cbd5e0;
+    }
+
+    .product .price {
+      font-size: 18px;
+      font-weight: 600;
+      color: #3182ce;
+      margin: 0 16px 16px;
+    }
+
+    .product .add-to-cart {
+      display: block;
+      margin: 0 16px 24px;
+      padding: 12px;
+      background: #3182ce;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .product .add-to-cart:hover {
+      background: #2b6cb0;
+    }
+
+    .product .stock {
+      font-size: 14px;
+      color: #e53e3e;
+      margin: 0 16px 8px;
+    }
+
+    #avis {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .reviews-carousel {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .review {
+      flex: 0 0 100%;
+      font-size: 18px;
+      color: #4a5568;
+      max-width: 600px;
+      margin: 16px auto;
+      font-style: italic;
+    }
+
+    body.dark-mode .review {
+      color: #cbd5e0;
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .carousel-controls button {
+      background: #3182ce;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .carousel-controls button:hover {
+      background: #2b6cb0;
+    }
+
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .trust-badges img {
+      height: 40px;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
+    .trust-badges img:hover {
+      opacity: 1;
+      filter: grayscale(0);
+    }
+
+    #test-respiration .test-container {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 32px auto;
+    }
+
+    body.dark-mode #test-respiration .test-container {
+      background: #2d3748;
+    }
+
+    #test-respiration .test-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    #test-respiration .progress-bar {
+      position: relative;
+      height: 60px;
+      background: #e2e8f0;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    #test-respiration .bar {
+      height: 100%;
+      width: 0%;
+      background: #3182ce;
+      transition: width 0.1s ease;
+    }
+
+    #test-respiration .runner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 60px;
+      width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      transition: left 0.1s ease;
+    }
+
+    #test-respiration .status {
+      margin-top: 24px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #1a365d;
+    }
+
+    body.dark-mode #test-respiration .status {
+      color: #e2e8f0;
+    }
+
+    footer {
+      background: #ffffff;
+      color: #1a202c;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    body.dark-mode footer {
+      background: #1a202c;
+      color: #cbd5e0;
+    }
+
+    footer .footer-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 80px;
+      margin-bottom: 48px;
+    }
+
+    footer .footer-columns div {
+      min-width: 220px;
+    }
+
+    footer h4 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    footer li {
+      margin-bottom: 12px;
+    }
+
+    footer a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #3182ce;
+    }
+
+    .newsletter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .newsletter input {
+      padding: 12px 16px;
+      border-radius: 50px;
+      border: 1px solid #cbd5e0;
+      width: 240px;
+      font-size: 16px;
+    }
+
+    .newsletter input:focus {
+      outline: 2px solid #3182ce;
+    }
+
+    .newsletter button {
+      padding: 12px 32px;
+      background: #3182ce;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .newsletter button:hover {
+      background: #2b6cb0;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 24px;
+      font-size: 14px;
+    }
+
+    body.dark-mode .footer-bottom {
+      border-top: 1px solid #4a5568;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero p {
+        font-size: 20px;
+      }
+
+      .section h2 {
+        font-size: 32px;
+      }
+
+      .product img {
+        height: 220px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 16px 24px;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      nav {
+        display: none;
+      }
+
+      nav.active {
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 24px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+      }
+
+      body.dark-mode nav.active {
+        background: #2d3748;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .hero {
+        padding: 100px 24px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .cta-btn {
+        width: 100%;
+        padding: 14px;
+      }
+
+      .product img {
+        height: 200px;
+      }
+
+      footer .footer-columns {
+        gap: 48px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 80px 20px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 80px 20px;
+      }
+
+      .section h2 {
+        font-size: 28px;
+      }
+
+      .cta-btn {
+        font-size: 16px;
+      }
+
+      .product h3 {
+        font-size: 20px;
+      }
+
+      .product p {
+        font-size: 14px;
+      }
+
+      .newsletter input,
+      .newsletter button {
+        width: 100%;
+        margin-bottom: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="logo">
+      <a href="#" aria-label="Nozease Home">
+        <img src="https://nozease.com/cdn/shop/files/Nozease_Logo.png?v=1750697988&width=120" alt="Nozease Logo" loading="lazy">
+      </a>
+    </div>
+    <button class="hamburger" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+    <nav role="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="#produits" aria-current="page">Produits</a></li>
+        <li><a href="#avis">Avis</a></li>
+        <li><a href="#test-respiration">Test Respiration</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">Mode sombre</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" role="main">
+    <video autoplay muted loop playsinline>
+      <source src="https://nozease.com/cdn/videos/breathing-animation.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas la vidéo.
+    </video>
+    <div class="container">
+      <h1>Transformez Votre Respiration, Transformez Votre Vie</h1>
+      <p>Découvrez les solutions naturelles Nozease pour mieux respirer, mieux dormir, et vivre pleinement.</p>
+      <button class="cta-btn" onclick="window.location.href='#produits'">Acheter Maintenant</button>
+    </div>
+  </section>
+
+  <section class="section" id="produits" aria-labelledby="produits-heading">
+    <div class="container">
+      <h2 id="produits-heading">Nos Solutions Phares</h2>
+      <div class="products">
+        <div class="product">
+          <a href="https://nozease.com/products/nozease-daily" title="Découvrez Nozease Daily" aria-label="Nozease Daily product">
+            <img src="nozease-daily-768076.webp" alt="Nozease Daily - Stick nasal pour confort respiratoire quotidien" loading="lazy">
+            <div class="overlay">Voir le produit</div>
+          </a>
+          <h3>Nozease Daily</h3>
+          <p>Stick nasal discret pour un confort respiratoire optimal toute la journée.</p>
+          <p class="price">19,99 €</p>
+          <p class="stock">Stock limité : 23 unités restantes</p>
+          <button class="add-to-cart" onclick="addToCart('Nozease Daily')">Ajouter au panier</button>
+        </div>
+        <div class="product">
+          <a href="https://nozease.com/products/nozease-night" title="Découvrez Nozease Night" aria-label="Nozease Night product">
+            <img src="nozease-night-875992.webp" alt="Nozease Night - Formule pour améliorer le sommeil" loading="lazy">
+            <div class="overlay">Voir le produit</div>
+          </a>
+          <h3>Nozease Night</h3>
+          <p>Formule douce pour des nuits paisibles et un sommeil réparateur.</p>
+          <p class="price">24,99 €</p>
+          <p class="stock">Stock limité : 15 unités restantes</p>
+          <button class="add-to-cart" onclick="addToCart('Nozease Night')">Ajouter au panier</button>
+        </div>
+        <div class="product">
+          <a href="https://nozease.com/products/nozease-active" title="Découvrez Nozease Active" aria-label="Nozease Active product">
+            <img src="nozease-active-615038.webp" alt="Nozease Active - Optimisez vos performances physiques" loading="lazy">
+            <div class="overlay">Voir le produit</div>
+          </a>
+          <h3>Nozease Active</h3>
+          <p>Boostez vos performances physiques avec une respiration optimisée.</p>
+          <p class="price">22,99 €</p>
+          <p class="stock">Stock limité : 18 unités restantes</p>
+          <button class="add-to-cart" onclick="addToCart('Nozease Active')">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="avis" aria-labelledby="avis-heading">
+    <div class="container">
+      <h2 id="avis-heading">Ce Que Nos Clients Disent</h2>
+      <div class="reviews-carousel" id="reviews-carousel">
+        <div class="review">⭐⭐⭐⭐⭐ « Nozease a transformé mes nuits, je dors enfin paisiblement ! » – Julie D.</div>
+        <div class="review">⭐⭐⭐⭐⭐ « Super efficace, je ne peux plus m’en passer pour mes entraînements. » – Marc L.</div>
+        <div class="review">⭐⭐⭐⭐⭐ « Mon mari ne ronfle plus, c’est un miracle ! » – Sarah K.</div>
+        <div class="review">⭐⭐⭐⭐⭐ « Facile à utiliser et résultats immédiats. Je recommande ! » – Emma T.</div>
+      </div>
+      <div class="carousel-controls">
+        <button onclick="prevReview()" aria-label="Previous review">←</button>
+        <button onclick="nextReview()" aria-label="Next review">→</button>
+      </div>
+      <div class="trust-badges">
+        <img src="" alt="Paiement sécurisé" loading="lazy">
+        <img src="" alt="Garantie satisfait ou remboursé" loading="lazy">
+        <img src="" alt="Livraison rapide" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="test-respiration" aria-labelledby="test-respiration-heading">
+    <div class="container">
+      <h2 id="test-respiration-heading">Découvrez la Différence Nozease</h2>
+      <p>Testez la différence de respiration avec et sans Nozease :</p>
+      <div class="test-container">
+        <div class="test-buttons">
+          <button class="cta-btn" onclick="startTest('slow')" aria-label="Test respiration without Nozease">Sans Nozease</button>
+          <button class="cta-btn" onclick="startTest('fast')" aria-label="Test respiration with Nozease">Avec Nozease</button>
+        </div>
+        <div class="progress-bar">
+          <div class="bar" id="bar"></div>
+          <div class="runner" id="runner">🏃</div>
+        </div>
+        <p class="status" id="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <h2 id="contact-heading">Contactez-Nous</h2>
+      <p>Une question ? Contactez notre équipe à <a href="mailto:support@nozease.com" aria-label="Email support">support@nozease.com</a></p>
+      <p>Suivez-nous sur <a href="https://instagram.com/nozease" aria-label="Nozease Instagram">Instagram</a> et <a href="https://tiktok.com/@nozease" aria-label="Nozease TikTok">TikTok</a> pour des conseils bien-être exclusifs.</p>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-columns">
+        <div>
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#" aria-label="Home page">Home</a></li>
+            <li><a href="#produits" aria-label="Products page">Products</a></li>
+            <li><a href="#contact" aria-label="Contact page">Contact</a></li>
+            <li><a href="#avis" aria-label="Reviews page">Reviews</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Aide</h4>
+          <ul>
+            <li><a href="#" aria-label="FAQ page">FAQ</a></li>
+            <li><a href="#avis" aria-label="Reviews page">Avis</a></li>
+            <li><a href="#" aria-label="Blog page">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Politiques</h4>
+          <ul>
+            <li><a href="#" aria-label="Privacy policy">Confidentialité</a></li>
+            <li><a href="#" aria-label="Refund policy">Remboursement</a></li>
+            <li><a href="#" aria-label="Terms of service">Conditions</a></li>
+          </ul>
+        </div>
+        <div class="newsletter">
+          <h4>Inscrivez-vous à notre newsletter</h4>
+          <p>Obtenez 10% de réduction sur votre premier achat !</p>
+          <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+            <input type="email" placeholder="email@example.com" aria-label="Enter your email for newsletter" required>
+            <button type="submit" aria-label="Subscribe to newsletter">S'inscrire</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025, Nozease. Respirez Mieux. Vivez Mieux.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-icon" onclick="viewCart()" aria-label="View shopping cart">🛒</div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Nozease",
+    "url": "https://nozease.com",
+    "logo": "https://nozease.com/cdn/shop/files/Nozease_Logo.png?v=1750697988&width=120",
+    "sameAs": [
+      "https://instagram.com/nozease",
+      "https://tiktok.com/@nozease"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "support@nozease.com"
+    }
+  }
+  </script>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let currentReview = 0;
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+      document.querySelector(".theme-toggle").textContent = document.body.classList.contains("dark-mode") ? "Mode clair" : "Mode sombre";
+    }
+
+    function toggleNav() {
+      const nav = document.querySelector("nav");
+      nav.classList.toggle("active");
+    }
+
+    function startTest(mode) {
+      const bar = document.getElementById("bar");
+      const runner = document.getElementById("runner");
+      const status = document.getElementById("status");
+
+      let value = 0;
+      bar.style.width = "0%";
+      runner.style.left = "0%";
+
+      const speed = mode === "fast" ? 2 : 0.8;
+      const message = mode === "fast" ? "Respiration fluide avec Nozease ! 💨 Achetez maintenant !" : "Respiration difficile sans Nozease 😮‍💨 Essayez Nozease !";
+
+      status.textContent = "Test en cours...";
+      clearInterval(window.testInterval);
+
+      window.testInterval = setInterval(() => {
+        if (value >= 100) {
+          clearInterval(window.testInterval);
+          status.innerHTML = `${message} <a href="#produits" style="color: #3182ce; text-decoration: underline;">Acheter maintenant</a>`;
+          return;
+        }
+
+        value += speed;
+        bar.style.width = `${value}%`;
+        runner.style.left = `calc(${value}% - 30px)`;
+      }, 20);
+    }
+
+    function addToCart(productName) {
+      cart.push(productName);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${productName} ajouté au panier !`);
+    }
+
+    function viewCart() {
+      if (cart.length === 0) {
+        alert("Votre panier est vide.");
+      } else {
+        alert(`Votre panier contient : ${cart.join(", ")}`);
+      }
+    }
+
+    function nextReview() {
+      const carousel = document.getElementById("reviews-carousel");
+      const reviews = carousel.children.length;
+      currentReview = (currentReview + 1) % reviews;
+      carousel.style.transform = `translateX(-${currentReview * 100}%)`;
+    }
+
+    function prevReview() {
+      const carousel = document.getElementById("reviews-carousel");
+      const reviews = carousel.children.length;
+      currentReview = (currentReview - 1 + reviews) % reviews;
+      carousel.style.transform = `translateX(-${currentReview * 100}%)`;
+    }
+
+    function handleNewsletterSubmit(event) {
+      event.preventDefault();
+      const emailInput = event.target.querySelector("input[type='email']");
+      const email = emailInput.value;
+      if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Merci pour votre inscription ! Utilisez le code NOZEASE10 pour 10% de réduction !");
+        emailInput.value = "";
+      } else {
+        alert("Veuillez entrer une adresse email valide.");
+      }
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        document.querySelector(".theme-toggle").textContent = "Mode clair";
+      }
+    };
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        document.querySelector("nav").classList.remove("active");
+      }
+    });
+  </script>
+</body>
+</html>
